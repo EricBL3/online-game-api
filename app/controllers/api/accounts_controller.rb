@@ -1,5 +1,5 @@
 class Api::AccountsController < ApplicationController
-    before_action: find_account, only: [:show, :update, :destroy]
+    before_action :find_account, only: [:show, :update, :destroy]
 
     def index
         @accounts = Account.all
